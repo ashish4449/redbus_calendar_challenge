@@ -26,7 +26,6 @@ public class getWeekEnds {
 			System.out.println(ss);
 			cl.stream().map(s -> s.getText()).forEach(s -> System.out.println(s));
 		} else {
-//			System.out.println("ky kr rha hai ye");
 			while (!MonthYear.equals(month)) {
 				d.findElement(By.cssSelector(".DayNavigator__IconBlock-qj8jdz-2:nth-child(3)")).click();
 				Thread.sleep(1000);
@@ -36,12 +35,10 @@ public class getWeekEnds {
 				// System.out.println(GetMonth);
 				String[] part2 = GetMonth.split("\\n");
 				String str1 = part2[0];
-
 				nextMonth = str1;
 
 				if (nextMonth.equals(month)) {
 					Thread.sleep(2000);
-
 					System.out.println(GetMonth);
 					List<WebElement> dl = d.findElements(By.cssSelector(".bwoYtA"));
 					dl.stream().map(s -> s.getText()).forEach(s -> System.out.print(s + ", "));
